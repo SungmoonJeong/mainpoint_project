@@ -1,0 +1,15 @@
+cookie:
+  expiry_days: 0
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    seongmoon:
+      name: seongmoon
+      password: $2b$12$8GaFUnaS2mTgY6sl1653neyN7RQ9KGbzGScu.z8MgE2MzmjBNgT02
+    "\uC131\uBB38":
+      name: "\uC131\uBB38"
+      password: $2b$12$DTKycwSArayWKzHJAWhhO.dXZTWWmzhuaR2P4WFnipK3clUsXyjny
+preauthorized:
+  emails:
+  - melsby@gmail.com
