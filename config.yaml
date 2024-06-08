@@ -6,10 +6,10 @@ credentials:
   usernames:
     seongmoon:
       name: seongmoon
-      password: $2b$12$8GaFUnaS2mTgY6sl1653neyN7RQ9KGbzGScu.z8MgE2MzmjBNgT02
+      password: $2b$12$DSqn.qveDiWKjP.Nmw44n.lCYuVhhueyGP0N7wrUuOUZjt7XeuZju
     "\uC131\uBB38":
       name: "\uC131\uBB38"
-      password: $2b$12$DTKycwSArayWKzHJAWhhO.dXZTWWmzhuaR2P4WFnipK3clUsXyjny
+      password: $2b$12$MsSCnkwFftwdHelZElovUOzs74jeH8hHdLWaqr1aaTB5BDg3a0TjS
 preauthorized:
   emails:
   - melsby@gmail.com

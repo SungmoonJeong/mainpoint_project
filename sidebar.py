@@ -3,7 +3,7 @@
 import streamlit as st
 
 def sidebar_menu():
-    menu = ['Home', 'EDA', 'ML', 'About']
+    menu = ['Home', 'EDA', 'ML', 'About', 'Exchange_rate']
     choice = st.sidebar.selectbox('메뉴', menu)
     return choice
 

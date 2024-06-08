@@ -13,10 +13,14 @@ import yaml
 import map
 import folium
 from streamlit_folium import folium_static
-import folium
 import json
 import os
 import map2
+import requests
+import pandas as pd
+import datetime as dt
+from exchange_rate import run_exchange_rate_app
+
 
 if __name__ == '__main__':
     
@@ -51,11 +55,13 @@ if __name__ == '__main__':
     
     ## 로그인 후 기능들 작성 ##
 
+    ###### 여기도 좀 더 자잘하게 할 게 아니라 하나만 실행해도 될 수 있게 정리 필요할수도?
+    
     # Folium 맵을 Streamlit 애플리케이션에 표시
     folium_map = map2.map_create()
     folium_static(folium_map)
 
-    
+
 
     # 나머지 코드는 그대로 유지
     subtitle.message()
@@ -69,6 +75,8 @@ if __name__ == '__main__':
         run_eda_app()
     elif choice == 'ML':
         run_ml_app()
+    elif choice == 'Exchange_rate':
+        run_exchange_rate_app()  # 이 부분에서 run_exchange_rate_app() 함수를 호출합니다.
     elif choice == 'About':
         pass
     
@@ -82,3 +90,5 @@ if __name__ == '__main__':
             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#fafafa"},
             "nav-link-selected": {"background-color": "#08c7b4"},
         })
+
+    

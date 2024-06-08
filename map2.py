@@ -25,7 +25,7 @@ def map_create():
     # GeoJSON 데이터를 지도에 추가
     folium.GeoJson(jsonData, name='json_data',
                 style_function=lambda feature: {
-                    'fillColor': 'blue' if feature['properties']['COUNTRY'] == 'Canada' else 'red',
+                    'fillColor': 'blue' if feature['properties']['COUNTRY'] == 'Mexico' else 'red',
                     'color' : 'black',
                     'weight': 2,
                     'fillOpacity': 0.5
