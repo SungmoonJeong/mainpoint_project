@@ -1,5 +1,9 @@
-matplotlib
-PyYAML
+streamlit
+subtitle
+data
+streamlit-authenticator
+map2
+folium
+streamlit-folium
+requests
 pandas
-stauth
-streamlit_authenticator
