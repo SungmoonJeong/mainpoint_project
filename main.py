@@ -5,11 +5,9 @@ from home_file import run_home_app
 from eda_file import run_eda_app
 from ml_file import run_ml_app
 from sidebar import sidebar_menu, option_menu
-import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 import streamlit as st
-import yaml
 import map
 import folium
 from streamlit_folium import folium_static
@@ -20,6 +18,11 @@ import requests
 import pandas as pd
 import datetime as dt
 from exchange_rate import run_exchange_rate_app
+try:
+    import yaml
+except ModuleNotFoundError as e:
+    print("yaml 모듈이 설치되어 있지 않습니다. 필요한 경우 'pip install pyyaml'을 사용하여 설치하세요.")
+    # 예외 처리 코드 추가
 
 
 if __name__ == '__main__':

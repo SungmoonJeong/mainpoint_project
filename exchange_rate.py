@@ -23,4 +23,5 @@ def run_exchange_rate_app():
     # 데이터 확인
     df.drop("result", axis = 1, inplace=True)
     
+    st.success('환율 데이터프레임')
     st.dataframe(df)
