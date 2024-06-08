@@ -2,3 +2,4 @@ matplotlib
 PyYAML
 pandas
 stauth
+streamlit_authenticator
