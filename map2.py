@@ -3,14 +3,9 @@ import folium
 from streamlit_folium import folium_static
 import json
 import os
-<<<<<<< HEAD
-
-def map_create():
-=======
 import pandas as pd
 
 def map_basic():
->>>>>>> 9a388cb (thrid commit)
     # 지도 생성
     map = folium.Map(location=[35.762887375145795, 84.08313219586536], zoom_start=3,
                     max_bounds=True, 
@@ -45,11 +40,6 @@ def map_basic():
 
     return map
 
-<<<<<<< HEAD
-# Streamlit 앱에 지도 표시
-st.title("World Map with Country Popups")
-folium_static(map_create())
-=======
 
 # 지도 만들기
 def map_create():
@@ -125,4 +115,3 @@ def map_create():
     return map
 
  
->>>>>>> 9a388cb (thrid commit)

@@ -3,30 +3,18 @@ import datetime as dt
 import requests
 import json
 import pandas as pd
-<<<<<<< HEAD
-
-=======
 from map2 import map_basic, map_create
 import folium
 import pandas as pd
 import os
->>>>>>> 9a388cb (thrid commit)
 
 def run_exchange_rate_app():
-# 여기서부터는 새로 파일 만들어서 함수로 변환이 필수적입니다.
-    
+# 여기서부터는 새로 파일 만들어서 함수로 변환이 필수적입니다.    
     #now = dt.datetime.now()
-<<<<<<< HEAD
-    #daily = now.strftime('%Y%m%d')    # 매 날짜 갱신해서 가져와 밑에 넣어줌으로써 데이터 갱신
-    
-    url = f"https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=3KBgM71Eun3za3GDai5a2kltMFmy2LYC&searchdate={20240607}&data=AP01"
-    response = requests.get(url)
-=======
     #daily = now.strftime('%Y%m%d')    # 매 날짜 갱신해서 가져와 밑에 넣어줌으로써 데이터 갱신, 작성해야
     
     url = f"https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=3KBgM71Eun3za3GDai5a2kltMFmy2LYC&searchdate={20240613}&data=AP01"
     response = requests.get(url, verify=False)
->>>>>>> 9a388cb (thrid commit)
 
     # JSON 데이터를 가져옴
     json_data = response.json()
@@ -38,10 +26,6 @@ def run_exchange_rate_app():
     df.drop("result", axis = 1, inplace=True)
     
     st.success('환율 데이터프레임')
-<<<<<<< HEAD
-    st.dataframe(df)
-=======
-    
 
     df['cur_nm'] = df['cur_nm'].str.replace(' 디르함', '')
     df['cur_nm'] = df['cur_nm'].str.replace(' 달러', '')
@@ -65,4 +49,3 @@ def run_exchange_rate_app():
     st.dataframe(df)
     return df
 
->>>>>>> 9a388cb (thrid commit)
