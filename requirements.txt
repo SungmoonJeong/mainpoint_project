@@ -7,3 +7,4 @@ folium
 streamlit-folium
 requests
 pandas
+streamlit_option_menu
