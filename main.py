@@ -41,7 +41,7 @@ def main():
     # 선택된 메뉴에 따라 다른 기능 실행
     if choice == 'Home':
         st.subheader('지도')
-        col1, col2, col3 = st.columns([2, 1, 1])
+        col1, col2, col3 = st.columns([3, 2, 2])
         with col1:
             folium_map = map2.map_create()
             folium_static(folium_map, 400, 300)  # Folium 지도를 Streamlit에 표시
@@ -67,7 +67,14 @@ def main():
         st.write("프로젝트에 대한 간단한 설명을 여기에 추가하세요.")
 
     elif choice == 'page3':
-        page3.page3_display()
+        col1, col2, col3 = st.columns([3,2,2])
+        with col1:
+            page3.page3_display()
+        with col2:
+            df =  run_exchange_rate_app()
+            st.dataframe(df)
+        with col3:
+            page3.page3_barchart()
 
 if __name__ == '__main__':
     main()

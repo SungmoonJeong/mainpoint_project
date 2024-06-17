@@ -46,6 +46,5 @@ def run_exchange_rate_app():
     df['cur_nm'] = df['cur_nm'].str.replace(' 크로네', '')
     df['cur_nm'] = df['cur_nm'].str.replace('사우디 리얄', '사우디아라비아')
     
-    st.dataframe(df)
     return df
 

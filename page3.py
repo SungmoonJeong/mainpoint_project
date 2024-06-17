@@ -3,6 +3,8 @@ import folium
 from streamlit_folium import folium_static
 import json
 from exchange_rate import run_exchange_rate_app  # 환율 데이터 가져오기 함수
+import exchange_rate as ex
+import pandas as pd
 
 def add_popup(feature, country_name, exchange_rate):
     popup_html = f"<b>{country_name}</b><br>"
@@ -71,7 +73,17 @@ def page3_display():
     st.write("여기는 페이지 3입니다.")
     
     folium_map = map_create_with_exchange_rate()
-    folium_static(folium_map)
+    folium_static(folium_map, width= 400, height= 400)
 
-# Run the display function
-page3_display()
+def page3_barchart():
+    
+    df = run_exchange_rate_app()
+    df = df.sort_values("deal_bas_r", ascending= False)
+    df['deal_bas_r'] = df['deal_bas_r'].str.replace(',', '').astype(float)
+    print(df)
+    st.bar_chart(
+        df[['cur_nm', 'deal_bas_r']].set_index('cur_nm'))
+
+    
+
+
